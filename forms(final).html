@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="mobile"],
+      input[type="password"],
+      input[type="branch"],
+      input[type="dob"],
+      input[type="file"],
+      input[type="range"],
+      input[type="number"] {
+        width: calc(100% - 16px);
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+        font-family: "Roboto", sans-serif;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="mobile"]:focus,
+      input[type="password"]:focus,
+      input[type="branch"]:focus,
+      input[type="dob"]:focus,
+      input[type="file"]:focus,
+      input[type="range"]:focus,
+      input[type="number"]:focus,
+      input[type="color"]:focus,
+      input[type="textarea"]:focus,
+      input[type="time"]:focus {
+        border-color: #ff7f50;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      .submit-btn {
+        background-color: #ff7f50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        transition: background-color 0.3s;
+        font-family: "Roboto", sans-serif;
+      }
+      .submit-btn:hover {
+        background-color: #ff6347;
+      }
+      select {
+        width: calc(100% - 20px);
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+        font-family: "Roboto", sans-serif;
+      }
+      select:focus {
+        border-color: #ff7f50;
+      }
+    </style>
+  </head>
+  <body>
+    <marquee behavior="scroll" direction="left"
+      ><strong>Please fill out the form below:</strong></marquee
+    >
+    <form>
+      <table>
+        <tr>
+          <th colspan="2" style="color: #333; font-size: 24px">Form</th>
+        </tr>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td>
+            <input type="text" id="name" name="name" placeholder="Enter Name" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="mobile">Mobile:</label></td>
+          <td>
+            <input
+              type="text"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter Mobile Number"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="pass">Password:</label></td>
+          <td>
+            <input
+              type="password"
+              id="pass"
+              name="pass"
+              placeholder="Enter Password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <label
+              ><input type="radio" name="gender" value="male" /> Male</label
+            >
+            <label
+              ><input type="radio" name="gender" value="female" /> Female</label
+            >
+            <label
+              ><input type="radio" name="gender" value="other" /> Other</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Branch:</td>
+          <td>
+            <select name="branch">
+              <option value="" style="color: #777">Select</option>
+              <option value="IT" style="color: #333">IT</option>
+              <option value="CSE" style="color: #333">CSE</option>
+              <option value="ECE" style="color: #333">ECE</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dob">Date Of Birth:</label></td>
+          <td><input type="date" id="dob" name="dob" required /></td>
+        </tr>
+        <tr>
+          <td><label for="time">Time:</label></td>
+          <td><input type="time" id="time" name="time" required /></td>
+        </tr>
+        <tr>
+          <td>Hobbies:</td>
+          <td>
+            <label
+              ><input type="checkbox" name="hobby" value="reading" />
+              Reading</label
+            >
+            <label
+              ><input type="checkbox" name="hobby" value="traveling" />
+              Traveling</label
+            >
+            <label
+              ><input type="checkbox" name="hobby" value="photography" />
+              Photography</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><label for="file">Upload Your File:</label></td>
+          <td><input type="file" id="file" name="file" required /></td>
+        </tr>
+        <tr>
+          <td><label for="range">Rate Your Personality:</label></td>
+          <td><input type="range" id="range" name="range" required /></td>
+        </tr>
+        <tr>
+          <td><label for="age">Enter Your Age:</label></td>
+          <td>
+            <input
+              type="number"
+              id="number"
+              name="number"
+              placeholder="Enter Age"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="color">Choose Your Favourite Color:</label></td>
+          <td><input type="color" id="color" name="color" required /></td>
+        </tr>
+        <tr>
+          <td><label for="address">Address:</label></td>
+          <td>
+            <textarea
+              rows="10"
+              cols="80"
+              placeholder="Enter Address"
+              required
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="submit-btn">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

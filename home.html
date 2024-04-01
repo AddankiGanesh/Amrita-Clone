@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amrita Website</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+      .header {
+        background-color: #b81e53;
+        padding: 20px;
+        text-align: center;
+      }
+      .logo {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+      }
+      .nav {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .nav a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: #ffd92a;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+        font-family: "Verdana", sans-serif;
+        transition: box-shadow 0.5s ease;
+      }
+      .nav a:hover {
+        background-color: #fac52d;
+        transform: scale(1.1);
+        border-width: 3px;
+        box-shadow: 0 0 20px 0 yellow;
+      }
+      .content-container {
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: stretch;
+      }
+      .yellow-box {
+        background-color: yellow;
+        padding: 20px;
+        flex: 0 0 300px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: "Verdana", sans-serif;
+        color: #333;
+        border: 2px solid #ffcc00;
+        border-radius: 20;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: box-shadow 0.5s ease;
+      }
+      .yellow-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-width: 3px;
+        box-shadow: 0 0 10px 0 yellow;
+      }
+      .pink-box {
+        background-color: #cf0947;
+        padding: 20px;
+        flex-grow: 1;
+        height: 100vh;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .pink-box:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px 0 #b81e53;
+      }
+      .white-box {
+        background-color: white;
+        padding: 20px;
+        flex-basis: 100%;
+        height: 100vh;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .form-container {
+        text-align: center;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+      .form-container:hover {
+        transform: translateY(-5px);
+      }
+      input[type="text"],
+      input[type="password"] {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 80%;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        transition: border-color 0.3s ease;
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: #b81e53;
+        border-width: 3px;
+        box-shadow: 0 0 20px 0 #b81e53;
+      }
+      .btn {
+        background-color: #fac52d;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        transition: box-shadow 0.5s ease;
+        transition: background-color 0.3s ease, box-shadow 0.5s ease,
+          transform 0.3s ease;
+      }
+      .btn:hover,
+      .btn:active,
+      .signup-btn:hover,
+      .signup-btn:active {
+        background-color: #ffd92a;
+        border-width: 3px;
+        box-shadow: 0 0 20px 0 #b81e53;
+        transform: scale(1.1);
+      }
+      .signup-label {
+        margin-top: 10px;
+        color: black;
+        font-family: "Verdana", sans-serif;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .signup-btn {
+        background-color: #fac52d;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 10px;
+        transition: box-shadow 0.5s ease;
+      }
+      .signup-btn:hover {
+        background-color: #ffd92a;
+        border-width: 3px;
+        box-shadow: 0 0 20px 0 #b81e53;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="amrita_logo.png" alt="Amrita Logo" />
+      <div class="nav">
+        <a href="home.html" target="home.html">HOME</a>
+        <a href="amaravati.jpg" target="div3">AMARAVATHI</a>
+        <a href="amritapuri.webp" target="div3">AMRITAPURI</a>
+        <a href="coimbatore.jpg" target="div3">COIMBATORE</a>
+        <a href="chennai.jpg" target="div3">CHENNAI</a>
+        <a href="bangalore.jpeg" target="div3">BANGALORE</a>
+        <a href="faridabad.jpg" target="div3">FARIDABAD</a>
+        <a href="mysore.jpg" target="div3">MYSORE</a>
+        <a href="table.html" target="div4">TIMETABLE</a>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="yellow-box">
+        <div class="form-container">
+          <form>
+            <label for="username">Username:</label><br /><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            /><br /><br />
+            <label for="password">Password:</label><br /><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            /><br />
+            <button type="submit" class="btn">Sign In</button>
+            <br /><br />
+          </form>
+          <label class="signup-label">Don't have an account?</label>
+          <a href="forms(final).html" target="div3" class="signup-btn"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+      <div class="pink-box">
+        <iframe
+          src="amma.jpg"
+          style="width: 100%; height: 100%; border: none"
+          name="div3"
+        ></iframe>
+      </div>
+    </div>
+    <div class="white-box">
+      <iframe
+        src="timetable.html"
+        style="width: 100%; height: 100%; border: none"
+        name="div4"
+      ></iframe>
+    </div>
+  </body>
+</html>
